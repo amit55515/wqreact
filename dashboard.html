@@ -54,8 +54,7 @@
 		<img src="images/wq.png" id="logo" />
 		<img src="images/fb.png" id="overlay" />
 		<img src="images/twitter.png" id="overlay2" />
-		<img src="images/in.png" id="overlay3" />
-    <img src="images/add.png" id="add" />
+		<img src="images/add.png" id="overlay3" />
 		<p id="name"> C. Smith</p>
 		<img src="images/photo1.png" id="user" />
 		<hr>
@@ -110,30 +109,18 @@
  <div id="left-fill" class="fill">
  		<p id="fill-text1">SEND ETH</p>
  		<label for="email"><p id="mediumletters">TO ADDRESS</p></label>
-       <div class="input-container2">
-    <img src="images/adress icon.png" id="input-icons2" />
-       <input type="text" placeholder="" name="address" required /></div>
-     
+      <input type="text" placeholder="" name="address" required />
 
       <label for="amount"><p id="mediumletters">AMOUNT IN ETHEREUM ( ALL: 0.000 TC )</p></label>
-      <div class="input-container2">
-    <img src="images/ethereum.png" id="input-icons2" />
-       <input type="text" placeholder="" name="amount" required /></div>
-      
+      <input type="text" placeholder="" name="amount" required />
       <button type="submit" class="btn" id="withdrawbtn">WITHDRAW FROM ETH WALLET</button></div>
     <div id="right-fill" class="fill">
  		<p id="fill-text2">SEND TOKEN</p>
  		<label for="email"><p id="mediumletters">TO ADDRESS</p></label>
-      <div class="input-container2">
-    <img src="images/adress icon.png" id="input-icons2" />
-       <input type="text" placeholder="" name="address" required /></div>
-      
+      <input type="text" placeholder="" name="address" required />
 
       <label for="amount"><p id="mediumletters">AMOUNT IN WRC COIN ( ALL: 0.000 TC )</p></label>
-            <div class="input-container2">
-    <img src="images/coin (2).png" id="input-icons2" />
-       <input type="text" placeholder="" name="amount" required /></div>
-      
+      <input type="text" placeholder="" name="amount" required />
       <button type="submit" class="btn" id="tokenbtn">WITHDRAW FROM TOKEN</button></div>  
 </div>
 
@@ -149,16 +136,11 @@
 </div>
   <div id="center-fill" class="fill">
  		<p id="fill-text2">ETH: 0</p>
-
-    <label for="eth"><p id="mediumletters">ETHEREUM</p></label>
-    <div class="input-container2">
-    <img src="images/ethereum (1).png" id="input-icons2" />
-      <input type="text3" placeholder="" name="address" required /></div>
+ 		<label for="eth"><p id="mediumletters">ETHEREUM</p></label>
+      <input type="text3" placeholder="" name="address" required />
 
       <label for="coin"><p id="mediumletters">WRC COIN ( ALL: 0.000 TC )</p></label>
-      <div class="input-container2">
-        <img src="images/coin (2).png" id="input-icons2" />
-      <input type="text3" placeholder="" name="amount" required /></div>
+      <input type="text3" placeholder="" name="amount" required />
       <button type="submit" class="btn" id="buybtn">ICO NOT STARTED YET</button></div>
 </div>
 
@@ -236,7 +218,6 @@ window.onload = function(){
   			var overlay = document.getElementById("overlay");
   			var overlay2 = document.getElementById("overlay2");
   			var overlay3 = document.getElementById("overlay3");
-        var add = document.getElementById("add");
   			var user = document.getElementById("user");
   			var menu = document.getElementById("menu");
   			var menu2 = document.getElementById("menu2");
@@ -290,7 +271,7 @@ window.onload = function(){
                 
   			
             }
-             add.onclick = function() {
+             overlay3.onclick = function() {
                 document.getElementById("social-panel").style.display="block"; 
             }
             modal.onclick = function() {

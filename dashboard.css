@@ -30,14 +30,6 @@ margin-top: 3%;
  box-shadow: 2px 0px 10px #888888;
   border-radius: 12px;
 }
-.input-container2{
-display: flex;
-width: 70%;
-margin-top: 3%;
-margin-left:15%;
- border:solid 2px white;
-  border-radius: 25px;
-}
 #input-icons{
 	width:7%;
 	height: 7%;
@@ -50,17 +42,6 @@ padding-top: 1%;
 padding-bottom: 1%;
 padding-left: 1%;
 padding-right: 1%;}
-#input-icons2{
-	width:6%;
-	height: 6%;
-	margin-top: 0.5%;
-background-color: inherit;
-border-radius: 50%;
-padding-left: 1%;
-padding-right: 1%;
-padding-top: 0.5%;
-padding-bottom: 0.5%;
-}
 #xx{
 	color: #FF0000;
 	position: absolute;
@@ -134,12 +115,6 @@ input[type=text4]::placeholder{opacity: 0.5;}
 	width: 7%;
 	margin-left: 11%;
 	margin-top: 15%;
-}
-#add{
-	position: absolute;
-	width: 1.5%;
-	margin-left: 0.5%;
-	margin-top: 3.5%;
 }
 #user{
 	position: absolute;
@@ -567,12 +542,13 @@ hr{
 	margin-left: 15%;
 }
 input[type=text]{
-  width: 100%;
+  width: 70%;
   padding-top: 1%;
   padding-bottom: 1%;
+  border:solid 2px white;
   border-radius: 12px; 
-  border: none;
   background-color: inherit;
+  margin-left: 15%;
   color: white;
 }
 input[type=text2]{
@@ -586,13 +562,13 @@ input[type=text2]{
   color: white;
 }
 input[type=text3]{
-  width: 100%;
+  width: 70%;
   padding-top: 1%;
   padding-bottom: 1%;
-  border: none;
+  border:solid 2px white;
   border-radius: 12px; 
   background-color: #20253B;
-  margin-left: 0%;
+  margin-left: 15%;
   color: white;
 }
 button {

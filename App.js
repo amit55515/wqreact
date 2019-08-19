@@ -164,12 +164,11 @@ $("#navbar > nav > ul > li > a").click(function(e) {
 });
 
 
-
 class App extends Component{
 	  componentWillMount() {
     this.setState({
       children: [],
-      activeItemIndex: 0,
+	  activeItemIndex: 0,
     });
 
     setTimeout(() => {
@@ -186,13 +185,46 @@ class App extends Component{
       })
     }, 100);
   }
+  componentDidMount(){
+	loader();
+	function loader(_success) {
+		var obj = document.querySelector('.preloader'),
+		inner = document.querySelector('.preloader_inner'),
+		page = document.querySelector('.page');
+		obj.classList.add('show');
+		page.classList.remove('show');
+		var w = 0,
+			t = setInterval(function() {
+				w = w + 1;
+				inner.textContent = w;
+				if (w === 100){
+					obj.classList.remove('show');
+					page.classList.add('show');
+					clearInterval(t);
+					w = 0;
+					if (_success){
+						return _success();
+					}
+				}
+			}, 20);
+	}
+
+}
 
    render(){const {
       activeItemIndex,
       children,
     } = this.state;
       return(
-         <div id="wholepage">
+    <div>
+		<div class="preloader">
+		<div class="preloader_image"><img src="./images/WQ logotype.png"></img></div>
+		<div class="preloader_text">LOADING   %</div>
+		<div class="preloader_inner">100</div>
+	</div>
+
+	<div class="page" id="wholepage">
+		
 	 <div id="particles" style={{
 		position: "absolute",
 		top: 0,
@@ -524,8 +556,8 @@ BLOCKCHAIN TECHNOLOGY IS AN INCORRUPTIBLE DIGITAL LEDGER OF ECONOMIC TRANSACTION
 		<li class="blue"><img src="images/Ellipseb.png" id="blue-icon"></img>USER REGISTRATION</li>
 		<li class="green"><img src="images/Ellipse 1.png" id="green-icon"></img>QUEST CREATION</li>
 		<li class="grey"><img src="images/Ellipseg.png" id="grey-icon"></img>EMPLOYEE SEARCHING</li>
-		<li class="yellow"><img src="images/Ellipse D.png" id="blue-icon"></img>SMART CONTRACT</li>
-		<li class="orange"><img src="images/Ellipse E.png" id="blue-icon"></img>EVALUATION OF<br /> &nbsp;&nbsp;&nbsp; COMPLETED WORK <br />
+		<li class="yellow"><img src="images/Ellipseb.png" id="blue-icon"></img>SMART CONTRACT</li>
+		<li class="orange"><img src="images/Ellipseb.png" id="blue-icon"></img>EVALUATION OF<br /> &nbsp;&nbsp;&nbsp; COMPLETED WORK <br />
 &nbsp;&nbsp;&nbsp;&nbsp;AND FEEDBACK</li>
 	</ul>
 	</div>
@@ -691,6 +723,7 @@ USING GEOLOCATION SERVICES AN EMPLOYER WILL SEARCH FOR PROSPECTIVE EMPLOYEES AND
   </ul>
   <p id="footer-text">WORK COIN IS A CRYPTOCURRENCY USED TO CALCULATE RENUMERATION BETWEEN AN EMPLOYER AND AN EMPLOYEE IN THE WORKQUEST NETWORK. THE COIN IS ALSO USED TO FACILITATE PAYMENT TRANSACTION OF ANY TYPE WITHIN OUR WORKQUEST ECOSYSTEM.</p>
   <p id="disclaimer">COPYRIGHT © 2019, WORKCOIN. ALL TRADE COPYRIGHTS BELONG TO THEIR RESPECTIVE OWNERS</p> 
+</div>
 </div>
 </div>
       );
